@@ -1,0 +1,89 @@
+ПРАКТИКА 4 / ГРУППА 9 / ФАКТИЧЕСКИЕ ПРОВЕРКИ
+
+Контекст: модель обучена только на data/demo_wine.csv (69 строк исходного UCI); это smoke-test, НЕ финальная оценка!
+
+GET /health
+{
+  "status_code": 200,
+  "body": {
+    "status": "ok",
+    "model_loaded": true,
+    "model_version": "wine-logreg-1.0.0"
+  }
+}
+
+POST /predict valid
+{
+  "status_code": 200,
+  "body": {
+    "predicted_class": 0,
+    "label": "остальное",
+    "probability": 0.504527,
+    "threshold": 0.65,
+    "model_version": "wine-logreg-1.0.0"
+  }
+}
+
+POST /predict invalid
+{
+  "status_code": 422
+}
+
+GET /model-info
+{
+  "status_code": 200,
+  "body": {
+    "model_version": "wine-logreg-1.0.0",
+    "data_version": "DEMO-sha256:aa07e90a3dc16351",
+    "trained_at": "2026-11-12T18:55:17+00:00",
+    "dataset": "Wine Quality (UCI, CC BY 4.0)",
+    "algorithm": "LogisticRegression(class_weight='balanced', random_state=42)",
+    "features": [
+      "fixed acidity",
+      "volatile acidity",
+      "citric acid",
+      "residual sugar",
+      "chlorides",
+      "free sulfur dioxide",
+      "total sulfur dioxide",
+      "density",
+      "pH",
+      "sulphates",
+      "alcohol",
+      "тип_вина"
+    ],
+    "target": "quality >= 7 (1=хорошее, 0=остальные)",
+    "threshold": 0.65,
+    "demo_mode": true,
+    "metrics": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "roc_auc": 0.75,
+      "pr_auc": 0.7049,
+      "selected_for_tasting": 2,
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "true_negatives": 10
+    },
+    "data_counts": {
+      "raw_rows": 69,
+      "duplicates_removed": 0,
+      "unique_rows": 69,
+      "train_rows": 55,
+      "validation_rows": 14,
+      "positive_train": 18,
+      "positive_validation": 4
+    }
+  }
+}
+
+$ python -m pytest -q
+......................                                                   [100%]
+22 passed in 0.47s
+
+exit_code: 0
+
+Проверка Docker: не выполнялась (Docker в текущей среде отсутствует).
+Полный датасет: не загружен в текущей среде, на машине студента используйте python train.py.

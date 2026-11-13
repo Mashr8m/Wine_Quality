@@ -1,0 +1,92 @@
+[
+  {
+    "features": {
+      "fixed acidity": 8.0,
+      "volatile acidity": 0.14,
+      "citric acid": 0.49,
+      "residual sugar": 1.5,
+      "chlorides": 0.035,
+      "free sulfur dioxide": 42.0,
+      "total sulfur dioxide": 120.0,
+      "density": 0.9928,
+      "pH": 3.26,
+      "sulphates": 0.4,
+      "alcohol": 10.6,
+      "тип_вина": "белое"
+    },
+    "probability": 0.67231376,
+    "predicted_class": 1
+  },
+  {
+    "features": {
+      "fixed acidity": 9.0,
+      "volatile acidity": 0.82,
+      "citric acid": 0.05,
+      "residual sugar": 2.4,
+      "chlorides": 0.081,
+      "free sulfur dioxide": 26.0,
+      "total sulfur dioxide": 96.0,
+      "density": 0.99814,
+      "pH": 3.36,
+      "sulphates": 0.53,
+      "alcohol": 10.0,
+      "тип_вина": "красное"
+    },
+    "probability": 0.03553055,
+    "predicted_class": 0
+  },
+  {
+    "features": {
+      "fixed acidity": 6.6,
+      "volatile acidity": 0.52,
+      "citric acid": 0.08,
+      "residual sugar": 2.4,
+      "chlorides": 0.07,
+      "free sulfur dioxide": 13.0,
+      "total sulfur dioxide": 26.0,
+      "density": 0.99358,
+      "pH": 3.4,
+      "sulphates": 0.72,
+      "alcohol": 12.5,
+      "тип_вина": "красное"
+    },
+    "probability": 0.68274138,
+    "predicted_class": 1
+  },
+  {
+    "features": {
+      "fixed acidity": 8.1,
+      "volatile acidity": 0.3,
+      "citric acid": 0.49,
+      "residual sugar": 12.3,
+      "chlorides": 0.049,
+      "free sulfur dioxide": 50.0,
+      "total sulfur dioxide": 144.0,
+      "density": 0.9971,
+      "pH": 3.09,
+      "sulphates": 0.57,
+      "alcohol": 10.2,
+      "тип_вина": "белое"
+    },
+    "probability": 0.47380183,
+    "predicted_class": 0
+  },
+  {
+    "features": {
+      "fixed acidity": 6.1,
+      "volatile acidity": 0.32,
+      "citric acid": 0.25,
+      "residual sugar": 1.8,
+      "chlorides": 0.086,
+      "free sulfur dioxide": 5.0,
+      "total sulfur dioxide": 32.0,
+      "density": 0.99464,
+      "pH": 3.36,
+      "sulphates": 0.44,
+      "alcohol": 10.1,
+      "тип_вина": "красное"
+    },
+    "probability": 0.19060954,
+    "predicted_class": 0
+  }
+]
